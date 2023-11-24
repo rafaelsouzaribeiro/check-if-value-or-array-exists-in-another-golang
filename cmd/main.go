@@ -16,9 +16,9 @@ func main() {
 
 	if err != nil {
 		panic(err)
-	} else {
-		println(sucess)
-	}
+	} 
+	
+	println(sucess)
 
 	// result := GetValueType(map[string]int{"rafa": 1, "bbb": 2})
 	// fmt.Printf("Type: %s,Type Inteiro: %s, Value: %v\n", result.Type, result.TypeFull, result.Value)
