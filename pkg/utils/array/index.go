@@ -39,6 +39,10 @@ func ArrayHasValue(value interface{}, data interface{}) (string, error) {
 	case reflect.Struct:
 		// If it's a struct
 		return printStructValue(value, reflect.ValueOf(data))
+	case reflect.Array:
+
+		// if it's a array
+		return printSliceValue(value, reflect.ValueOf(data))
 
 	default:
 		return "", errors.New("Nenhuma valor encontrado")
@@ -64,7 +68,9 @@ func ArrayKeyExists(key interface{}, data interface{}) (string, error) {
 
 	case reflect.Struct:
 		return printStruct(key, reflect.ValueOf(data))
-
+	case reflect.Array:
+		// If it's a array
+		return printSlice(key, reflect.ValueOf(data))
 	default:
 		return "", errors.New("Nenhuma chave encontrada")
 	}

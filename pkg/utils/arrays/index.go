@@ -21,6 +21,9 @@ func ArrayInsideArray(valores interface{}, array interface{}) (interface{}, erro
 	case reflect.Struct:
 		// If it's a struct
 		return printStructArray(reflect.ValueOf(valores), reflect.ValueOf(array))
+	case reflect.Array:
+		// If it's a array
+		return printSliceArray(reflect.ValueOf(valores), reflect.ValueOf(array))
 
 	default:
 		return "", errors.New("Nenhuma valor encontrado")
