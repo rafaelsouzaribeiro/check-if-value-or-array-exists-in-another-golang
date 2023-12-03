@@ -29,15 +29,23 @@ func main() {
 	// println(sucess)
 	// array := map[int]string{1: "1", 3: "2", 5: "3"}
 	// valores := map[int]string{5: "2"}
-	// client := Arrays{
-	// 	Nome:  "Paulo",
-	// 	Idade: 37,
-	// }
+	client := Arrays{
+		Nome:  "Paulo",
+		Idade: 37,
+	}
 
-	// clientC := Arrays{
-	// 	Nome:  "Rafael",
-	// 	Idade: 37,
-	// }
+	clientC := Arrays{
+		Nome:  "Paulo",
+		Idade: 37,
+	}
+
+	res, er := arrays.ArrayInsideArray(clientC, client)
+
+	if er != nil {
+		panic(er)
+	}
+
+	fmt.Println(res)
 
 	var g [1]int
 	g[0] = 1
@@ -63,4 +71,17 @@ func main() {
 	}
 
 	fmt.Println(sucess)
+
+	var r2 [2]string
+	r2[0] = "1"
+	r2[1] = "2"
+
+	sucess2, err2 := array.ArrayHasValue("1", r2)
+
+	if err2 != nil {
+		panic(err2)
+	}
+
+	fmt.Println(sucess2)
+
 }
