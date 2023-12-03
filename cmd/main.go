@@ -30,7 +30,7 @@ func main() {
 	// array := map[int]string{1: "1", 3: "2", 5: "3"}
 	// valores := map[int]string{5: "2"}
 	client := Arrays{
-		Nome:  "Paulo",
+		Nome:  "Rafael",
 		Idade: 37,
 	}
 
