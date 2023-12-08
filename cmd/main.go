@@ -30,6 +30,8 @@ func main() {
 	// println(sucess)
 	// array := map[int]string{1: "1", 3: "2", 5: "3"}
 	// valores := map[int]string{5: "2"}
+
+	// Verify struct
 	client := Arrays{
 		Nome:  "Rafael",
 		Idade: 37,
@@ -48,6 +50,26 @@ func main() {
 
 	fmt.Println(res)
 
+	// Verify slice struct
+	pessoas := []Arrays{
+		{Nome: "Rafael", Idade: 37},
+		{Nome: "Paulo2", Idade: 37},
+	}
+
+	pessoasc := []Arrays{
+		{Nome: "Rafael", Idade: 37},
+		{Nome: "Paulo", Idade: 37},
+	}
+
+	res, er = arrays.ArrayInsideArray(pessoasc, pessoas)
+
+	if er != nil {
+		panic(er)
+	}
+
+	fmt.Println(res)
+
+	// Verify array inside another
 	var g [1]int
 	g[0] = 1
 	var t [3]int
@@ -61,6 +83,7 @@ func main() {
 
 	fmt.Println(resp)
 
+	// Verify key exist
 	var r [2]string
 	r[0] = "1"
 	r[1] = "2"
@@ -73,6 +96,7 @@ func main() {
 
 	fmt.Println(sucess)
 
+	// check if value is array
 	var r2 [2]string
 	r2[0] = "1"
 	r2[1] = "2"
